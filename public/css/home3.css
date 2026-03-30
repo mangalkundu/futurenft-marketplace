@@ -1,0 +1,1419 @@
+@import url(https://db.onlinewebfonts.com/c/a473f32ddaf0ac9ecbafb5cb7c0ba67e?family=Posterama+Text+W07+Regular);
+      
+      
+       :root {
+            --primary: #2081e2;
+            --primary-light: #e8f4fd;
+            --secondary: #f7f7f7;
+            --text: #04111d;
+            --text-light: #707a83;
+            --border: #e7e7e7;
+            --success: #35c77f;
+            --bg: #fafafa;
+            --navbar-bg: rgba(255, 255, 255, 0.8);
+            --card-bg: white;
+        }
+        
+        * {
+  -webkit-tap-highlight-color: transparent; /* Removes mobile blue tap highlight */
+}
+
+        
+        .dark-mode {
+            --primary: #3a9bff;
+            --primary-light: #1a2a3a;
+            --secondary: #1e1e1e;
+            --text: #f5f5f5;
+            --text-light: #a0a0a0;
+            --border: #2d2d2d;
+            --success: #35c77f;
+            --bg: #121212;
+            --navbar-bg: rgba(18, 18, 18, 0.8);
+            --card-bg: #1e1e1e;
+        }
+        
+        
+   
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Posterama Text W07 Regular",  sans-serif;
+        }
+        
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 100vw;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+
+        }
+       
+        .body2 {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }       
+       
+        
+        /* Improved Top Navigation Bar */
+        
+        .navbar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: var(--navbar-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        position: sticky;
+        top: 0px;
+        z-index: 100;
+        border-bottom: 2px solid var(--border);
+        
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+           
+        }
+
+        .logo {
+            text-align: center;
+            margin-top: 0px;
+             margin-bottom: 0px;
+            font-size: 26px;
+            color: var(--text);
+             font-weight: 750;
+             text-decoration: none;
+        }
+        .logo b {
+            font-size: 26px;
+            margin-bottom: 60px;
+            text-align: center;
+            color: #222;
+            font-weight: 750;
+            color: transparent;
+            background: linear-gradient(
+                90deg,
+              #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: 400% 400%;
+            animation: rgbFlow 6s ease infinite;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+ 
+ 
+        
+/* Animated Theme Toggle */
+.theme-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border);
+}
+
+.sun-moon-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.sun, .moon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+    color: #ff8a65;
+            
+}
+
+.moon {
+    opacity: 0;
+    transform: translateY(30px) rotate(90deg);
+    color: #f5f5f5;
+}
+
+.dark-mode .sun {
+    opacity: 0;
+    transform: translateY(-30px) rotate(180deg);
+}
+
+.dark-mode .moon {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+}
+
+.sun::before {
+    content: "\f185";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.moon::before {
+    content: "\f186";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 16px;
+}
+
+/*.theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .theme-toggle:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}*/
+
+
+
+        
+        .account-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            
+        }
+
+        .rgb-btn {
+            margin-right:-2px;
+            width: 100%;
+            padding: 10px 10px;
+            color: white;
+            border: none;
+           
+            border-radius: 20px;
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            margin-top: 0px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            text-decoration: none !important;
+            background: linear-gradient(
+                90deg,
+                #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+            );
+            background-size: 400% 400%;
+            animation: rgbFlow 6s ease infinite;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            
+        }
+        .rgb-btn-link {
+            text-decoration: none;
+            display: inline-block; /* Ensures proper button alignment */
+        }
+        .rgb-btn i {
+            text-decoration: none;
+            display: inline-block; /* Ensures icon doesn't inherit text styles */
+        }
+        
+        
+        .rgb-btn:hover:not(:disabled) {
+            transform: translateY(0px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            
+        }
+        .rgb-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .rgb-btn:active {
+            transform: translateY(0);
+            
+        }
+        .rgb-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.1)
+            );
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .rgb-btn:hover::before {
+            opacity: 1;
+           
+
+        }
+        @keyframes rgbFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }        
+
+        /* Main Content */
+        .container {
+            padding: 15px;
+            padding-bottom: 80px; /* Space for mobile menu */
+        }        
+        
+    
+
+        
+/* Hero Section Styles */
+        .hero {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+             white-space: nowrap; /* Ensures text stays in one line */
+            letter-spacing: 2px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: ;
+           /* color:  var(--text); */
+            animation: popIn 1s ease-out forwards, vanish 0.8s cubic-bezier(0.5, 0, 0.75, 0) 4s forwards;
+            transform: scale(0);
+            opacity: 0;
+            
+            color: transparent; background: linear-gradient(105.9deg, rgb(15, 209, 165) 3.8%, rgb(15, 157, 209) 20.8%, rgb(133, 13, 230) 51.9%, rgb(230, 13, 202) 73.1%, rgb(242, 180, 107) 94.1%); -webkit-background-clip: text; background-clip: text;
+        }
+        .hero p {
+            font-size: 14px;
+            margin-top: 4px;
+            opacity: 0;
+            margin-bottom: 15px;
+            color:  var(--text);
+            max-width: 100%;
+            animation: fadeIn 1s ease-out 0.5s forwards, vanish 0.8s cubic-bezier(0.5, 0, 0.75, 0) 4s forwards;
+            transform: translateY(20px);
+        }
+
+
+        .hero-btn {
+            padding: 12px 15px;
+            border-radius: 25px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background-color: transparent;
+            color:  var(--text);
+            border: none;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 700;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: btnPopIn 1s ease-out 1s forwards, vanish 0.8s cubic-bezier(0.5, 0, 0.75, 0) 4s forwards;
+            box-shadow:0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px;
+            padding: 2px;
+            background: linear-gradient(90deg, #ff4d4d, #ff4dff, #f9cb28, #4dff4d, #4da6ff);
+            background-size: 400% 400%;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rgbFlow 4s linear infinite;
+            z-index: -1;
+        }
+
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 0.9;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes btnPopIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rgbFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes vanish {
+            0% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+                filter: blur(0);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.8) translateY(-20px);
+                filter: blur(4px);
+            }
+        }
+        
+
+        /* NFT Slider Section - Centered with RGB Effects */
+        .nft-slider-section {
+            width: 100%;
+            max-width: 500px;
+            margin: 2 auto;
+            padding: 15px;
+        }
+        
+        .slider-header {
+           margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .slider-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .nft-slider-container {
+            position: relative;
+            width: 100%;
+            height: 265px;
+            perspective: 1000px;
+            overflow: visible;
+           
+        }
+        
+        .nft-carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;  
+        }
+        
+        .nft-slide {
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            left: 50%;
+            top: 10px;
+            margin-left: -115px;
+     /*     background-color: #1e1e1e;  */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 1;
+            
+        }
+        
+        .nft-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 0px;
+            background: linear-gradient(
+                90deg,
+                #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+            );
+            background-size: 400% 400%;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rgbFlow 5s linear infinite;
+            z-index: -1;
+        }
+        
+        .nft-slide.active {
+            transform: translateX(0) scale(1);
+            z-index: 5;
+            box-shadow:  0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        
+        .nft-slide.prev {
+            transform: translateX(-40px) scale(0.9);
+            opacity: 0.85;
+            z-index: 4;
+        }
+        
+        .nft-slide.next {
+            transform: translateX(40px) scale(0.9);
+            opacity: 0.85;
+            z-index: 4;
+        }
+        
+        .nft-slide.far-prev {
+            transform: translateX(-80px) scale(0.8);
+            opacity: 0.6;
+            z-index: 3;
+        }
+        
+        .nft-slide.far-next {
+            transform: translateX(80px) scale(0.8);
+            opacity: 0.6;
+            z-index: 3;
+        }
+        
+        .nft-slide.hidden {
+            opacity: 0;
+            z-index: 1;
+        }
+        
+        .nft-slide-image {
+            width: 100%;
+            height: 170px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+        }
+        
+        .nft-slide-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, rgba(30, 30, 30, 0.9), transparent); 
+        }
+        
+        .nft-slide-info {
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(30, 30, 30, 0.7);
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        
+        .current-bid {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 1px;
+        }
+        
+        .bid-amount {
+            font-size: 16px;
+            
+            display: flex;
+             color: white;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+            gap: 5px;
+        }
+        
+        .usdt-icon {
+            color: #26a17b;
+            font-size: 14px;
+        }
+        
+        .usdt-logo {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 2px;
+        }
+        
+        @keyframes rgbFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+
+
+
+        
+        
+        /* Featured Section */
+        .featured-container {
+        background-color: var(--bg);
+        border-radius: 0px;
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 15px auto;
+       
+    }
+    
+    .dotted-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(var(--text) 1px, transparent 2px);
+        background-size: 15px 15px;
+        opacity: 0.1;
+        z-index: 0;
+    }
+    
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        
+        .section-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+      
+           
+        }
+        
+        .view-all {
+            
+            z-index: 1; /* Ensures link is above other elements */
+            color: var(--text);
+            font-size: 14px;
+           
+            text-decoration: none;
+            color: transparent;
+            background: linear-gradient(
+        90deg,
+        #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+    );
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: 400% 400%;
+            animation: rgbFlow 6s ease infinite;
+            display: inline-flex; /* Add this */
+            align-items: center; /* Add this */
+            gap: 8px; /* Add this - adjust the value as needed */
+        }
+        
+        
+                /* Swipeable tabs */
+.tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 12px;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab {
+    padding: 10px 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none;
+    background: var(--border);
+    color: var(--text);
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;  
+}
+
+.tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+    );
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab.active {
+    color: white;
+}
+
+.tab.active::before {
+    opacity: 1;
+    animation: rgbFlow 4s linear infinite;
+}
+
+.tab:hover {
+    transform: translateY(-2px);
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+
+
+@keyframes rgbFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+        
+        
+        
+        /* NFT Cards */
+         
+        .tab-content {
+             margin-bottom: 20px;
+             
+            }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+           
+    
+        .nft-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            
+        }
+        
+        .nft-card {
+            width: 100%;
+            height: 235px;
+            
+            background-color: var(--card-bg)  !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            opacity: 0;
+           
+        }
+        
+        
+        .nft-image-container {
+            position: relative;
+            width: 100%;
+            padding: 12px;
+            height: 130px;
+            aspect-ratio: 1/1;
+            border-radius: 15px 15px 15px 15px;
+            
+        }
+        
+.nft-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.05);
+    position: relative; /* Add this to make ::after positioning work */
+}
+
+.nft-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(255, 255, 255, 0.15) 0%,
+        transparent 40%
+    ),
+    repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 3px,
+        transparent 3px,
+        transparent 6px
+    );
+    opacity: 0.6;
+    border-radius: 15px; /* Match the parent's border-radius */
+}
+        
+        .like-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .nft-info {
+            padding: 12px;
+
+        }
+        
+
+        .nft-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        
+        .nft-collection {
+            color: var(--text-light);
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .verified {
+            color: var(--primary);
+            font-size: 40px;
+            width: 14px;
+            height: 14px;
+            
+        }
+        
+        .nft-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: left;
+            gap: 5px; font-size: 16px;
+        }
+        
+        
+        
+    /*    .time-left {
+             color: var(--text-light);
+             font-size: 12px;
+             margin-left: 10px ;
+         }  */
+
+        @keyframes cardSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-card {
+            animation: cardSlideUp 0.6s ease-out forwards;
+        }
+        
+        
+        
+/* Add these styles to your existing CSS in home.blade.php */       
+
+.nft-card {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+                box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.nft-card:hover {
+    transform: rotateY(10deg) rotateX(10deg) translateZ(10px);
+   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important; */
+}
+
+/* Liquid background effect */
+.nft-card::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    background: #4a90e2;
+    border-radius: 50%;
+    transform: translateZ(-80px);
+    filter: blur(80px);
+    transition: transform 0.7s cubic-bezier(0.36, 0, 0.66, -0.56), 
+                opacity 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.nft-card:hover::before {
+    transform: translateZ(-50px) translateY(30px) translateX(-20px) rotate(-20deg) scale(1.2);
+    opacity: 0.7;
+}
+
+/* Shine effect */
+.nft-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 30%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.1) 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.nft-card:hover::after {
+    opacity: 1;
+    animation: shine-effect 2s infinite linear;
+}
+
+/* Glow effect */
+.nft-card .card__glow {
+    position: absolute;
+    inset: -15px;
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(255, 138, 101, 0.4) 0%,
+        rgba(255, 138, 101, 0) 60%
+    );
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    z-index: 0;
+}
+
+.nft-card:hover .card__glow {
+    opacity: 0.5;
+}
+
+/* Image hover effect */
+.nft-image-container {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.nft-card:hover .nft-image-container {
+    transform: translateY(-0px) scale(1.02);
+}
+
+
+
+/* Text hover effects */
+.nft-name {
+    transition: color 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.nft-card:hover .nft-name {
+    color: #ff8a65;
+    transform: translateX(3px);
+}
+
+.nft-collection {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.nft-card:hover .nft-collection {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+/* Price hover effect */
+.nft-price {
+    transition: color 0.4s ease-in-out, transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.nft-card:hover .nft-price {
+    color: #ff8a65;
+    transform: translateX(3px);
+}
+
+/* Like button hover effect */
+.like-btn {
+    transition: all 0.4s ease-in-out;
+    z-index: 3;
+}
+
+.nft-card:hover .like-btn {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff) !important;
+    background-size: 400% 400% !important;
+    animation: rgbFlow 4s ease infinite !important;
+}
+
+/* Keyframes for animations (add if not already present) */
+@keyframes shine-effect {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+@keyframes rgbFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Add to your existing CSS */
+.nft-price-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    margin-left: 10px;
+    font-size: 10px;
+    color: var(--text-light);
+}
+
+.countdown-digit {
+    background-color:var(--border);
+    color: var(--primary);
+    padding: 2px 2px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-weight: bold;
+    min-width: 10px;
+    text-align: center;
+}
+
+.countdown-separator {
+    margin: 0 1px;
+}
+
+/* Add animation when timer resets */
+@keyframes pulseReset {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); background-color: var(--success); color: white; }
+    100% { transform: scale(1); }
+}
+
+.resetting {
+    animation: pulseReset 0.5s ease;
+}
+        
+
+
+/* Mobile Menu - Transparent with RGB Text & Hover Effects */
+.mobile-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--navbar-bg); /* Same as navbar */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+    border-top: 2px solid var(--border);
+    z-index: 100;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon {
+    font-size: 14px;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.menu-text {
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.menu-item:hover .menu-icon {
+    transform: translateY(-2px);
+}
+
+/* Active State - RGB Text/Icon */
+.menu-item.active .menu-icon,
+.menu-item.active .menu-text {
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400% 400%;
+    animation: rgbFlow 6s ease infinite;
+}
+
+
+        
+            /* Hamburger menu */
+            .hamburger {
+                cursor: pointer;
+            }
+            
+            .hamburger input {
+                display: none;
+            }
+            
+            .hamburger svg {
+                margin-top: 5px;
+                height: 2.1em;
+                transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .line {
+                fill: none;
+                stroke: var(--text);
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 3;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                            stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .line-top-bottom {
+                stroke-dasharray: 12 63;
+            }
+            
+            .hamburger input:checked + svg {
+                transform: rotate(-45deg);
+            }
+            
+            .hamburger input:checked + svg .line-top-bottom {
+                stroke-dasharray: 20 300;
+                stroke-dashoffset: -32.42;
+            }
+            
+/* Transparent Dropdown Menu with Glass Effect */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 200px;
+    background-color:var(--navbar-bg); /* Same as navbar */
+    backdrop-filter: blur(10px); /* Glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 0 0 15px 15px;
+    box-shadow: 1px 10px 25px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    transform-origin: top;
+    border: 1px solid var(--border);
+    margin-top: 0px;
+}
+
+.dropdown-menu.active {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 5px;
+    
+}
+
+.menu-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    border-radius: 100px;
+    background-color:var(--secondary)
+    
+}
+
+.menu-link:hover {
+
+    transform: translateX(-2px);
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text {
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400% 400%;
+    animation: rgbFlow 6s ease infinite;
+}
+
+.dropdown-menu .menu-icon {
+    font-size: 14px !important; /* Adjust this value for size */
+    width: 18px !important;     /* Adjust for container width */
+    height: 20px !important;    /* Adjust for container height */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99; /* Just below the dropdown menu */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+       
+
+/*loading*/
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+     opacity: 1;
+    visibility: visible;
+    
+}
+
+.logo-loading {
+    text-align: center;
+    font-size: 26px;
+    color: var(--text);
+    font-weight: 750;
+    animation: popIn 0.6s ease-out forwards, vanish 0.8s cubic-bezier(0.5, 0, 0.75, 0) 4.5s forwards;
+
+}
+
+.logo-loading b {
+    font-size: 26px;
+    color: transparent;
+    background: linear-gradient(90deg, #ff4d4d, #f9cb28, #4dff4d, #4da6ff, #ff4dff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400% 400%;
+    animation: rgbFlow 6s ease infinite,  popIn 0.6s ease-out forwards, vanish 0.8s cubic-bezier(0.5, 0, 0.75, 0) 4.5s forwards;  
+}
+        @keyframes popIn {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+.tagline {
+    font-size: 14px;
+    margin-top: 10px;
+    color: var(--text-light);
+    text-align: center;
+    font-weight: normal;
+    height: 20px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.tagline-words {
+    display: inline-block;
+     white-space: nowrap;
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+    margin: 0 1px;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.word:nth-child(1) { transition-delay: 0.1s; }
+.word:nth-child(2) { transition-delay: 0.2s; }
+.word:nth-child(3) { transition-delay: 0.3s; }
+.word:nth-child(4) { transition-delay: 0.4s; }
+.word:nth-child(5) { transition-delay: 0.5s; }
+
+.tagline.show .word {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide when done */
+.loading-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
