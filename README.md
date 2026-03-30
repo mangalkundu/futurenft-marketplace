@@ -38,13 +38,8 @@ This hands-on experience helped me learn:
 
 ---
 
-## 📁 Repository Structure
-
-This repository contains only the files I personally redesigned. The full Laravel project (controllers, models, vendor files, .env) is not included for security and copyright reasons.
-
----
-
 ## 🙏 Acknowledgments
 
 - This project started from a purchased Laravel template
 - All design choices, color schemes, and layout modifications are my own work
+- This repository contains only the files I personally redesigned. The full Laravel project (controllers, models, vendor files, .env) is not included for security and copyright reasons.
