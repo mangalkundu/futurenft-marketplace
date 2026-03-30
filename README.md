@@ -1,6 +1,6 @@
 # FutureNFT Marketplace
 
-A live NFT marketplace website built during my gap year. I redesigned multiple Blade view files with my own layout, color scheme, and styling using HTML, CSS, and JavaScript. The site is deployed live on Hostinger with a custom domain.
+A live NFT marketplace website built using Laravel. I redesigned multiple Blade view files with my own layout, color scheme, and styling using HTML, CSS, and JavaScript. The site is deployed live on Hostinger with a custom domain.
 
 🔗 **Live Website:** [https://futurenft.io/](https://futurenft.io/)
 
@@ -8,7 +8,7 @@ A live NFT marketplace website built during my gap year. I redesigned multiple B
 
 ## 📌 Project Overview
 
-This project started as a purchased Laravel template. During my gap year, I took on the challenge of redesigning the front-end to create my own unique design. I modified multiple Blade view files, restructured layouts, and added custom styling to match my vision.
+This project started as a purchased Laravel template. I redesigned the front-end to create my own unique design, modifying multiple Blade view files, restructuring layouts, and adding custom styling to match my vision.
 
 This hands-on experience helped me learn:
 - Laravel Blade syntax and view structure
