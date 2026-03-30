@@ -30,17 +30,17 @@ This hands-on experience helped me learn:
 
 ---
 
-## 📁 Repository Structure
-
-This repository contains only the files I personally redesigned. The full Laravel project (controllers, models, vendor files, .env) is not included for security and copyright reasons.
-
----
-
 ## 👨‍💻 Author
 
 **Mangal Kundu**
 
 - **LinkedIn:** [linkedin.com/in/mangalkundu](https://www.linkedin.com/in/mangalkundu)
+
+---
+
+## 📁 Repository Structure
+
+This repository contains only the files I personally redesigned. The full Laravel project (controllers, models, vendor files, .env) is not included for security and copyright reasons.
 
 ---
 
