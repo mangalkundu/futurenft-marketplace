@@ -2,7 +2,7 @@
 
 A live NFT marketplace website built during my gap year. I redesigned multiple Blade view files with my own layout, color scheme, and styling using HTML, CSS, and JavaScript. The site is deployed live on Hostinger with a custom domain.
 
-🔗 **Live Website:** https://futurenft.io/
+🔗 **Live Website:** [https://futurenft.io/](https://futurenft.io/)
 
 ---
 
