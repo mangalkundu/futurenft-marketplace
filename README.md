@@ -2,7 +2,7 @@
 
 A live NFT marketplace website built using Laravel. I redesigned multiple Blade view files with my own layout, color scheme, and styling using HTML, CSS, and JavaScript. The site is deployed live on Hostinger with a custom domain.
 
-🔗 **Live Website:** [https://futurenft.io/](https://futurenft.io/)
+🔗 **Live Website:** [View](https://futurenft.io/)
 
 ---
 
@@ -34,7 +34,7 @@ This hands-on experience helped me learn:
 
 **Mangal Kundu**
 
-- **LinkedIn:** [linkedin.com/in/mangalkundu](https://www.linkedin.com/in/mangalkundu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-mangalkundu-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/mangalkundu)
 
 ---
 
